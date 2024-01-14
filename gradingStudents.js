@@ -53,24 +53,20 @@
 // Student  received a grade below , so the grade will not be modified and the student's final grade is 
 
 function gradingStudents(grades) {
-    // Write your code here
-    let finalResults=[]
-    const lastDigs=[3,4,8,9]
-     grades.forEach(grade=>{
-        
-        if(grade<38){
-            finalResults.push(grade);
-        }
-        else if (((grade>=38)&&(grade<98)) && (lastDigs.includes(grade%10))){
-            
-            finalResults.push(grade+(5-(grade%5)))
-        }
-        else if(((grade>=38)&&(grade<98)) && (!lastDigs.includes(grade%10))){
-            finalResults.push(grade)
-            
-        }
-    })
+    let finalResults = [];
     
-    return finalResults
-
+    grades.forEach(grade => {
+        if (grade < 38) {
+            finalResults.push(grade);
+        } else {
+            const nextMultipleOf5 = Math.ceil(grade / 5) * 5;
+            if (nextMultipleOf5 - grade < 3) {
+                finalResults.push(nextMultipleOf5);
+            } else {
+                finalResults.push(grade);
+            }
+        }
+    });
+    
+    return finalResults;
 }
