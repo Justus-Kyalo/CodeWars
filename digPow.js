@@ -1,4 +1,18 @@
-
+function digPow(n, p){
+  // ...
+  const splitArr=n.toString().split("");
+  
+  const totalPow=splitArr.reduce((acc,curr)=>{
+    acc+=Math.pow(+curr,p)
+    p+=1;
+    return acc;
+  },0)
+  if(totalPow%n===0){
+    return totalPow/n;
+  }else{
+    return -1
+  }
+}
 
 
 // 46288 --> 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
