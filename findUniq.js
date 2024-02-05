@@ -1,3 +1,12 @@
+function findUniq(arr) {
+  // do magic
+  const uniqueArr=[...new Set(arr)]
+  const subArr=arr.slice(0,4)
+  const mode=subArr.filter(val=>val===uniqueArr[0])
+  return mode.length===1 ? uniqueArr[0] : uniqueArr[1]
+
+ 
+}
 
 
 // There is an array with some numbers. All numbers are equal except for one. Try to find it!
