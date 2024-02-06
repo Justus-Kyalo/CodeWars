@@ -1,3 +1,18 @@
+function longestConsec(strarr, k) {
+  
+    // your code
+  
+if(k<=0 || k>strarr.length) return "";
+  let longArr =[]
+  for(let i=0;i<=strarr.length;i++){
+    const currConSeq=strarr.slice(i,i+k).join("");
+    longArr.push(currConSeq)
+   
+  }
+  const longest= longArr.sort((a,b)=>b.length-a.length)[0]
+  return longest
+}
+
 // You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
 
 // Examples:
