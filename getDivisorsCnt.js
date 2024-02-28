@@ -1,3 +1,24 @@
+function getDivisorsCnt(n) {
+  if (n === 1) {
+    return 1;
+  }
+
+  let result = 0;
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) {
+      // If i is a divisor of n, increment the count
+      result++;
+
+      // If i and n/i are different, increment the count again
+      if (i !== n / i) {
+        result++;
+      }
+    }
+  }
+  return result;
+}
+
+
 // Count the number of divisors of a positive integer n.
 
 // Random tests go up to n = 500000.
