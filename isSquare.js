@@ -1,3 +1,8 @@
+var isSquare = function(n) {
+  let sqrtFloor = Math.floor(Math.sqrt(n));
+
+  return n === sqrtFloor**2 ? true : false;
+}
 
 // A square of squares
 // You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
