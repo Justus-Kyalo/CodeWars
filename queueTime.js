@@ -1,3 +1,17 @@
+function queueTime(customers, n) {
+  //TODO
+  let tills = new Array(n).fill(0);
+  for (let customer of customers){
+    let nextTill = tills.indexOf(Math.min(...tills));
+    
+     tills[nextTill] +=customer;
+    
+  
+  }
+  
+    return Math.max(...tills)
+  
+}
 // There is a queue for the self-checkout tills at the supermarket. Your task is write a function to calculate the total time required for all the customers to check out!
 
 // input
