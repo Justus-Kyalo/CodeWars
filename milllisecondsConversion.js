@@ -1,3 +1,11 @@
+function past(h, m, s){
+  //#Happy Coding! ^_^
+  let hoursMills=h*3600000
+  let minMills= m*60000
+  let secMills=s*1000
+
+  return hoursMills+minMills+secMills;
+}
 // Clock shows h hours, m minutes and s seconds after midnight.
 
 // Your task is to write a function which returns the time since midnight in milliseconds.
