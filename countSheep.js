@@ -1,3 +1,12 @@
+var countSheep = function (num){
+  //your code here
+  let result=[]
+  for(let i=1;i<=num;i++){
+    result.push(`${i} sheep...`)
+    
+  }
+  return result.join("")
+}
 // If you can't sleep, just count sheep!!
 
 // Task:
