@@ -1,3 +1,13 @@
+String.prototype.isUpperCase = function() {
+  // your code here
+  if(this.valueOf()===this.valueOf().toUpperCase()){
+    return true
+  }
+  else{
+    return false;
+  }
+}
+
 // Is the string uppercase?
 // Task
 // Create a method to see whether the string is ALL CAPS.
